@@ -22,7 +22,7 @@ namespace Restaurant_API
 			builder.Services.AddSwaggerGen();
 			builder.Services.AddDbContext<RestaurantContext>(options =>
 			{
-				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+				options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection"));
 			});
 			//Scope for repo
 			builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
